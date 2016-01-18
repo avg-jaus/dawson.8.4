@@ -39,7 +39,7 @@ class Critter(object):
         self.hunger += 1         # увеличить уровень голода
         self.boredom += 1        # увеличить уровень уныния
 
-    """ Отражает самочувствие зверя """
+    """ Отражает самочувствие зверей """
     @property
     def mood(self):
         unhappiness = self.hunger + self.boredom
@@ -116,13 +116,13 @@ def main():
         # кормление зверей
         elif choice == "2":
             # Запрос количества еды и вызов метода с уменьшением чувства голода
-            amount_of_food = int(input("Сколько еды дадим зверюшке - " + crit.name + "?:"))
+            amount_of_food = int(input("Сколько еды дадим зверям - " + crit.name + "?:"))
             crit.eat(amount_of_food)
          
         # игра с зверями
         elif choice == "3":
             # Запрос количества времени игры и вызов метода уменьшения уровня уныния
-            amount_of_boredom = int(input("Как долго поиграем со зверюшкой - " + crit.name + "?:"))           
+            amount_of_boredom = int(input("Как долго поиграем со зверями - " + crit.name + "?:"))           
             crit.play(amount_of_boredom)
             
         # вывод точных значений атрибутов объекта
@@ -134,4 +134,3 @@ def main():
             print("\nИзвините. в меню нет пункта.")
 
 main()
-
