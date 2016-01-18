@@ -55,7 +55,7 @@ class Critter(object):
     
     """ Беседуем с хозяином """
     def talk(self):
-        print("Меня зовут", self.name, "и сейчас я чувствую себя", self.mood, "\n")
+        print("Меня зовут", self.name, "и сейчас я чувствую себя", self.mood)
         self.__pass_time()
         
     """ Едим """    
@@ -109,9 +109,10 @@ def main():
         if choice == "0":
             print("До свиданья.")
 
-        # беседа со зверюшкой
+        # беседа со зверями
         elif choice == "1":
-            crit.talk()
+            for x in crit_list:
+                x.talk()
         
         # кормление зверей
         elif choice == "2":
